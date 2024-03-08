@@ -14,14 +14,19 @@ class BukuController extends Controller
         return view('buku.index', compact('buku'));
     }
 
+    // untuk menampilkan halaman create, jika ada
     public function create()
     {
         //
     }
 
+    // perintah untuk mengolah data yang akan dikiriman
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        // dd($input);
+        Buku::create($input);
+        return back();
     }
 
     public function show(Buku $buku)
