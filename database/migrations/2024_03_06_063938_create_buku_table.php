@@ -19,7 +19,7 @@ class CreateBukuTable extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

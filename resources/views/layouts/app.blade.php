@@ -13,9 +13,10 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-
+    
     <!-- Scripts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+
 </head>
 
 <body class="font-sans antialiased">
@@ -34,6 +35,8 @@
             {{ $slot }}
         </main>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
