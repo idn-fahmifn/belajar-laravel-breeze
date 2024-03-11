@@ -42,13 +42,18 @@ class BukuController extends Controller
         // 
     }
 
-    public function update(Request $request, Buku $buku)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->all(); //mengambil seluruh request dari form
+        $buku = Buku::find($id); //mengambil data dari ID yang akan diubah
+        $buku->update($data); //perintah untuk mengubah data lama ke data baru yang diambil dari variabel $data
+        return redirect('/buku');
     }
 
-    public function destroy(Buku $buku)
+    public function destroy($id)
     {
-        //
+        $data = Buku::find($id);
+        $data->delete();
+        return back();
     }
 }

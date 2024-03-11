@@ -48,8 +48,15 @@
                                 {{$item->penerbit}}
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Selengkapnya</a>
+                                <a href="{{route('buku.show', $item->id)}}"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                    Selengkapnya
+                                </a>
+                                <form action="{{route('buku.destroy', $item->id)}}" method="post">
+                                    @csrf
+                                    {{method_field('DELETE')}}
+                                    <button type="submit" onclick="return confirm('Hapus data ini?')" class="text-red-600 text-bold">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
