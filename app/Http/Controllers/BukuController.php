@@ -29,14 +29,17 @@ class BukuController extends Controller
         return back();
     }
 
-    public function show(Buku $buku)
+    // untuk memanggil halaman detail.
+    public function show($id)
     {
-        //
+        $data = Buku::find($id);
+        return view('buku.detail', compact('data'));
     }
 
+    // Untuk memanggil halaman edit
     public function edit(Buku $buku)
     {
-        //
+        // 
     }
 
     public function update(Request $request, Buku $buku)
