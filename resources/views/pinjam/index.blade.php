@@ -21,16 +21,16 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Judul
+                                Nama Peminjam
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Pengarang
+                                Judul Buku
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Penerbit
+                                Tanggal Pinjam
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Penerbit
+                                Tanggal kembali
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Pilihan
