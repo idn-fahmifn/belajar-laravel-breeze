@@ -8,8 +8,23 @@
     <div class="py-12">
         <div class="container w-3/4 bg-white py-3 px-3 mx-auto rounded-sm">
             <div class="relative overflow-x-auto mb-10">
+                <p class="text-title text-gray-600">
+
+                </p>
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Nama Peminjam
+                            </th>
+                            <td class="px-6 py-4">
+                                :
+                            </td>
+                            <td class="px-6 py-4">
+                                {{$data->nama_peminjam}}
+                            </td>
+                        </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -19,7 +34,7 @@
                                 :
                             </td>
                             <td class="px-6 py-4">
-                                {{$data->judul}}
+                                {{$data->buku->judul}}
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -31,7 +46,7 @@
                                 :
                             </td>
                             <td class="px-6 py-4">
-                                {{$data->pengarang}}
+                                {{$data->buku->pengarang}}
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -43,7 +58,31 @@
                                 :
                             </td>
                             <td class="px-6 py-4">
-                                {{$data->penerbit}}
+                                {{$data->buku->penerbit}}
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Tanggal Pinjam
+                            </th>
+                            <td class="px-6 py-4">
+                                :
+                            </td>
+                            <td class="px-6 py-4">
+                                {{$data->pinjam}}
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Tanggal Kembali
+                            </th>
+                            <td class="px-6 py-4">
+                                :
+                            </td>
+                            <td class="px-6 py-4">
+                                {{$data->kembali}}
                             </td>
                         </tr>
                     </tbody>

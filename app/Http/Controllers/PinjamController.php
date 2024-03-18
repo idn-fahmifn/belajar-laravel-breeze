@@ -49,9 +49,11 @@ class PinjamController extends Controller
      * @param  \App\Models\Pinjam  $pinjam
      * @return \Illuminate\Http\Response
      */
-    public function show(Pinjam $pinjam)
+    public function show($id)
     {
-        //
+        $data = Pinjam::find($id);
+        $buku = Buku::all();
+        return view('pinjam.detail', compact('data', 'buku'));
     }
 
     /**

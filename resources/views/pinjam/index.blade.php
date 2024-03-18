@@ -30,7 +30,7 @@
                                 Tanggal Pinjam
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Tanggal kembali
+                                Tanggal kembali 
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Pilihan
@@ -54,11 +54,11 @@
                                 {{$item->kembali}}
                             </td>
                             <td class="px-6 py-4">
-                                <a href="{{route('buku.show', $item->id)}}"
+                                <a href="{{route('pinjam.show', $item->id)}}"
                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                     Selengkapnya
                                 </a>
-                                <form action="{{route('buku.destroy', $item->id)}}" method="post">
+                                <form action="{{route('pinjam.destroy', $item->id)}}" method="post">
                                     @csrf
                                     {{method_field('DELETE')}}
                                     <button type="submit" onclick="return confirm('Hapus data ini?')" class="text-red-600 text-bold">Hapus</button>
